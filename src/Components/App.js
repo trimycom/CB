@@ -18,9 +18,10 @@ export default class App extends Component {
           }
         }}
         configureScene={route => {
-          if (route.name === 'AUTHENTICATION') return Navigator.SceneConfigs.FloatFromRight;
+          if (route.name === 'MAIN') return Navigator.SceneConfigs.FloatFromRight;
           return Navigator.SceneConfigs.FloatFromLeft;
         }}
+
       />
     );
   }
@@ -28,21 +29,21 @@ export default class App extends Component {
 
 //css
 const styles = StyleSheet.create({
-                    body: {
-                    flex: 1,
+    body: {
+        flex: 1,
         backgroundColor: 'green',
         flexDirection: 'row'
 
     },
     rowtop: {
-                    backgroundColor: 'white',
+        backgroundColor: 'white',
         flex: 1,
         borderWidth: 1,
         borderBottomColor: 'grey',
         height: 40
     },
     textTab: {
-                    color: 'red',
+        color: 'red',
         justifyContent: 'center',
         alignItems: 'center'
     }
