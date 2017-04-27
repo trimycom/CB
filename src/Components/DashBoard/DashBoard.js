@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, } from 'react-native';
+import { View, Image } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import Home from './Home/Home';
 import Search from './Search/Search';
 import Loan from './Loan/Loan';
 import RValue from './RValue/RValue';
 import Header from './Header';
+import styles from './../Tool/Style';
+import icHomeS from './../../media/appIcon/Home_blue.png';
+import icHome from './../../media/appIcon/Home_gray.png';
+import icSearchS from './../../media/appIcon/Search_blue.png';
+import icSearch from './../../media/appIcon/Search_gray.png';
+import icLoanS from './../../media/appIcon/Loan_blue.png';
+import icLoan from './../../media/appIcon/Loan_gray.png';
+import icRValueS from './../../media/appIcon/Real_blue.png';
+import icRValue from './../../media/appIcon/Real_gray.png';
 
 export default class DashBoard extends Component {
 
@@ -20,13 +29,14 @@ export default class DashBoard extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#DEDD51' }}>
+      <View style={{ flex: 1 }}>
       <Header onOpen={this.openMenu.bind(this)} />
-      <Text> DashBoard Component </Text>
       <TabNavigator>
   <TabNavigator.Item
     selected={this.state.selectedTab === 'home'}
-    title="Home"
+    renderIcon={() => <Image source={icHome} style={styles.tabBarIcon} />}
+    renderSelectedIcon={() => <Image source={icHomeS} style={styles.tabBarIcon} />}
+    badgeText="10"
     onPress={() => this.setState({ selectedTab: 'home' })}
   >
     <Home />
@@ -34,7 +44,8 @@ export default class DashBoard extends Component {
 
   <TabNavigator.Item
     selected={this.state.selectedTab === 'search'}
-    title="Search"
+    renderIcon={() => <Image source={icSearch} style={styles.tabBarIcon} />}
+    renderSelectedIcon={() => <Image source={icSearchS} style={styles.tabBarIcon} />}
     onPress={() => this.setState({ selectedTab: 'search' })}
   >
     <Search />
@@ -42,7 +53,8 @@ export default class DashBoard extends Component {
 
   <TabNavigator.Item
     selected={this.state.selectedTab === 'loan'}
-    title="Loan"
+    renderIcon={() => <Image source={icLoan} style={styles.tabBarIcon} />}
+    renderSelectedIcon={() => <Image source={icLoanS} style={styles.tabBarIcon} />}
     onPress={() => this.setState({ selectedTab: 'loan' })}
   >
     <Loan />
@@ -50,7 +62,8 @@ export default class DashBoard extends Component {
 
   <TabNavigator.Item
     selected={this.state.selectedTab === 'rvalue'}
-    title="R.Value"
+    renderIcon={() => <Image source={icRValue} style={styles.tabBarIcon} />}
+    renderSelectedIcon={() => <Image source={icRValueS} style={styles.tabBarIcon} />}
     onPress={() => this.setState({ selectedTab: 'rvalue' })}
   >
     <RValue />

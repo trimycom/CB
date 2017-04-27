@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Navigator } from 'react-native';
+import { Navigator } from 'react-native';
 import Main from './Main/Main';
 import ChangeInfo from './ChangeInfo/ChangeInfo';
 import Authentication from './Authentication/Authentication';
@@ -18,36 +18,10 @@ export default class App extends Component {
           }
         }}
         configureScene={route => {
-          if (route.name === 'MAIN') return Navigator.SceneConfigs.FloatFromRight;
+        if (route.name === 'MAIN') return Navigator.SceneConfigs.FloatFromRight;
           return Navigator.SceneConfigs.FloatFromLeft;
         }}
-
       />
     );
   }
 }
-
-//css
-const styles = StyleSheet.create({
-    body: {
-        flex: 1,
-        backgroundColor: 'green',
-        flexDirection: 'row'
-
-    },
-    rowtop: {
-        backgroundColor: 'white',
-        flex: 1,
-        borderWidth: 1,
-        borderBottomColor: 'grey',
-        height: 40
-    },
-    textTab: {
-        color: 'red',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-
-});
-
-// Ket thuc css

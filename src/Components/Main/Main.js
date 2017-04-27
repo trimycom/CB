@@ -21,7 +21,7 @@ export default class Main extends Component {
     };
     openControlPanel() {
       this.drawer.open();
-    };
+    }
 
     render() {
       const { navigator } = this.props;
