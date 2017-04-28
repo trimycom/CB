@@ -31,7 +31,7 @@ export default class DashBoard extends Component {
     return (
       <View style={{ flex: 1 }}>
       <Header onOpen={this.openMenu.bind(this)} />
-      <TabNavigator>
+      <TabNavigator style={{ backgroundColor: '#ffffff' }}>
   <TabNavigator.Item
     selected={this.state.selectedTab === 'home'}
     renderIcon={() => <Image source={icHome} style={styles.tabBarIcon} />}
@@ -52,21 +52,21 @@ export default class DashBoard extends Component {
   </TabNavigator.Item>
 
   <TabNavigator.Item
-    selected={this.state.selectedTab === 'loan'}
-    renderIcon={() => <Image source={icLoan} style={styles.tabBarIcon} />}
-    renderSelectedIcon={() => <Image source={icLoanS} style={styles.tabBarIcon} />}
-    onPress={() => this.setState({ selectedTab: 'loan' })}
-  >
-    <Loan />
-  </TabNavigator.Item>
-
-  <TabNavigator.Item
     selected={this.state.selectedTab === 'rvalue'}
     renderIcon={() => <Image source={icRValue} style={styles.tabBarIcon} />}
     renderSelectedIcon={() => <Image source={icRValueS} style={styles.tabBarIcon} />}
     onPress={() => this.setState({ selectedTab: 'rvalue' })}
   >
     <RValue />
+  </TabNavigator.Item>
+
+  <TabNavigator.Item
+    selected={this.state.selectedTab === 'loan'}
+    renderIcon={() => <Image source={icLoan} style={styles.tabBarIcon} />}
+    renderSelectedIcon={() => <Image source={icLoanS} style={styles.tabBarIcon} />}
+    onPress={() => this.setState({ selectedTab: 'loan' })}
+  >
+    <Loan />
   </TabNavigator.Item>
 
 </TabNavigator>

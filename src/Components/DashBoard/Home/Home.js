@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 export default class Home extends Component {
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#000000' }}>
+      <View style={{ flex: 1, backgroundColor: '#ffffff' }}>
       <Text> Home Component</Text>
       </View>
     );

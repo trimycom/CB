@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Navigator } from 'react-native';
+import { Navigator, StatusBar } from 'react-native';
 import Main from './Main/Main';
 import ChangeInfo from './ChangeInfo/ChangeInfo';
 import Authentication from './Authentication/Authentication';
 
+StatusBar.setBackgroundColor('#1e90ff');
 export default class App extends Component {
   render() {
     return (
