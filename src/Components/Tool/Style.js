@@ -66,6 +66,11 @@ LoanbtnResultText: {
   color: '#ffffff',
   fontWeight: 'bold'
 },
+LoanListResult: {
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+},
   MenuBodyStyle: {
   flex: 1,
   backgroundColor: '#1e90ff',
